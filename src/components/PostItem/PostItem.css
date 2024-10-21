@@ -1,0 +1,31 @@
+.post-item{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    border: 3px solid teal;
+    padding: 15px 20px;
+    border-radius: 20px;
+    width: 100%;
+}
+.post-item-checked p{
+    text-decoration: line-through;
+}
+.buttons-row{
+    align-self: flex-end;
+    display: flex;
+    column-gap: 5px;
+}
+.item-input{
+    background-color: #fff;
+    border: 2px solid teal;
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: 70%;
+}
+.redact-panel{
+    display: flex;
+    column-gap: 15px;
+}
+.redact-panel-hide{
+    display: none;
+}

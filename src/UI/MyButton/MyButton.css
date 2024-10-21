@@ -1,0 +1,15 @@
+.my-button{
+    padding: 5px 15px;
+    color: teal;
+    font-size: 14px;
+    background-color: transparent;
+    border: 1px solid teal;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.my-button:hover{
+    background-color: #45a049; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+    transform: scale(1.05);
+    font-weight: bold;
+}
