@@ -132,9 +132,8 @@ body{
 
 .note{
     display: flex;
-    flex-direction: row;
-    column-gap: 30px;
-    justify-content: space-between;
+    flex-direction: column-reverse;
+    row-gap: 30px;
 }
 .note-list{
     display: flex;
@@ -161,13 +160,12 @@ body{
 .note-form{
     display: flex;
     flex-direction: column;
-    align-self: self-end;
     row-gap: 40px;
 }
 .note-form textarea{
     border: 3px solid teal;
     border-radius: 40px;
-    width: 400px;
+    width: 100%;
     height: 200px;
     padding: 20px;
     font-size: 25px;
