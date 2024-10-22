@@ -101,3 +101,78 @@ body{
     padding-top: 100px;
     width: 70vw;
 }
+.navbar{
+    border: 3px solid teal;
+    display: block;
+    width: 100%;
+    border-radius: 15px;
+    padding: 10px 15px;
+
+}
+.navbar-list{
+    display: flex;
+    column-gap: 10px;
+    justify-items: flex-end;
+    flex-direction: row-reverse;
+}
+.navbar-list a{
+    transition: all 0.3s ease;
+    padding: 5px;
+    color: black;
+
+}
+.navbar-list a:hover{
+
+        background-color: #45a049; 
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); 
+        transform: scale(1.05);
+        font-weight: bold;
+        border-radius: 5px;
+}
+
+.note{
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+    justify-content: space-between;
+}
+.note-list{
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    max-width: 600px;
+    height: 500px;
+    padding: 20px;
+    row-gap: 20px;
+}
+.note-list li.onedit{
+    border-color: red;
+}
+.note-list li{
+    border: 3px solid teal;
+    border-radius: 5px;
+    padding:10px 10px;
+}
+.note-list li{
+    display: flex;
+    column-gap: 40px;
+    justify-content: space-between;
+}
+.note-form{
+    display: flex;
+    flex-direction: column;
+    align-self: self-end;
+    row-gap: 40px;
+}
+.note-form textarea{
+    border: 3px solid teal;
+    border-radius: 40px;
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    font-size: 25px;
+}
+.note-form button{
+    margin-top: auto;
+    text-transform: uppercase;
+}

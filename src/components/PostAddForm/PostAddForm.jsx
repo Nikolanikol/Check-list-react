@@ -17,7 +17,7 @@ const PostAddForm = ({handleAddPost,}) => {
   return (
     <form action="" className='post-add-form'>
         <input placeholder='set your deal' type="text" value={inputValue} onChange={(e)=>setInputValue(e.target.value)} />
-        <MyButton onClick = {addPost} type = 'button'> Add deal</MyButton>
+        <MyButton onClick = {addPost} type = 'button'> Add task</MyButton>
     </form>
   )
 }

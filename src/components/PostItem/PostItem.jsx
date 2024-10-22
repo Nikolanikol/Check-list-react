@@ -21,7 +21,7 @@ const PostItem = ({id, body, checked, handleChecked, count, handleDelete, handle
         </div>
         <div className='buttons-row'>
             <MyButton onClick={()=>handleChecked(id)}>Check</MyButton>
-            <MyButton onClick={()=>setIsModalVisible(!isModalVisible)}>Redaction</MyButton>
+            <MyButton onClick={()=>setIsModalVisible(!isModalVisible)}>Edit</MyButton>
             <MyButton onClick={()=>handleDelete(id)}>Delete</MyButton>
         </div>
     </div>

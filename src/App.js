@@ -1,53 +1,27 @@
 
-import { useState } from 'react';
+import {BrowserRouter, Link, Route, Router, Routes} from 'react-router-dom'
 import './App.css';
-import PostList from './components/PostList/PostList';
-import PostAddForm from './components/PostAddForm/PostAddForm';
+import CheckList from './pages/CheckList';
+import NoteList from './pages/NoteList'
 
 function App() {
-    const [posts, setPosts] = useState([
-        {id : '1', body : 'Wash a car', checked : true},
-        {id : '2', body : 'Have a breackfast', checked : false},
-        {id : '3', body : 'To watch TV', checked : false},
-    ])
-    const handleAddPost = (newPost)=>{
-        setPosts([...posts, newPost])
-    }
-    const handleChecked = (id)=>{
-        setPosts(posts=>{
-             return posts.map(post=>{
-                if(post.id == id){
-                    return {...post, checked : !post.checked}
-                }
-                return post
-            })
-        })
-    }
-    const handleDelete= (id)=>{
-        setPosts(posts=>{
-            return posts.filter(post=>post.id != id)
-        })
-    }
-    const handleRedaction = (id, body)=>{
-        setPosts(posts=>{
-            return posts.map(post=>{
-                if(post.id == id){
-                    return{...post, body : body}
-                }
-                return post
-            })
-        })
-    }
-    console.log('render')
+    
   return (
     <div className="App">
-        <PostAddForm handleAddPost = {handleAddPost} />
-        <PostList 
-            posts = {posts} 
-            handleChecked ={handleChecked}
-            handleDelete = {handleDelete}
-            handleRedaction = {handleRedaction}
-        />
+        <BrowserRouter> 
+            <div className='navbar'>
+                <ul className='navbar-list'>
+                    <li><Link to='/checklist'>Checklist</Link></li>
+                    <li><Link to='/notelist'>Notelist</Link></li>
+                </ul>
+            </div>
+            <Routes>
+                <Route element = {<CheckList/>} path='/checklist'/>
+                <Route element = {<NoteList/>} path='/notelist'/>
+            </Routes>
+        
+        </BrowserRouter>
+
     </div>
   );
 }

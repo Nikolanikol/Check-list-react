@@ -6,6 +6,7 @@ const PostList = ({posts, handleChecked, handleDelete, handleRedaction}) => {
   return (
     <div className='posts-list'>
         {
+            posts.length >= 1 ? 
             posts.map((post, i)=>{
                 return(
                     <PostItem 
@@ -20,6 +21,8 @@ const PostList = ({posts, handleChecked, handleDelete, handleRedaction}) => {
                     />
                 )
             })
+            :
+            <h1>You have not task!!!</h1>
         }
     </div>
   )
